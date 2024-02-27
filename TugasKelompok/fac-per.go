@@ -4,7 +4,6 @@ import (
     "fmt"
 )
 
-// Fungsi untuk menghitung nilai faktorial
 func factorial(n int) int {
     if n == 0 {
         return 1
@@ -12,7 +11,6 @@ func factorial(n int) int {
     return n * factorial(n-1)
 }
 
-// Fungsi untuk menghitung nilai permutasi
 func permutation(x, y int) int {
     if x >= y {
         return factorial(x) / factorial(x-y)

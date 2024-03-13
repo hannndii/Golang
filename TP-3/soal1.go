@@ -51,13 +51,13 @@ package main
 
 import (
 	"fmt"
-	"math"
 )
+const pi = 3.14
 
 func hitungLuasKelilingLingkaran(r float64, I, k *float64) {
-	*I = math.Pi * r * r
+	*I = pi * r * r
 
-	*k = 2 * math.Pi * r
+	*k = 2 * pi * r
 }
 
 func hitungLuasKelilingPersegi(s float64, I, k *float64) {
@@ -76,12 +76,12 @@ func main() {
 	var (
 		r, s, luasLingkaran, luasPersegi, kelilingLingkaran, kelilingPersegi, totalLuas, totalKeliling float64
 	)
-
+     
+	fmt.Scanf("%f %f", &r, &s)
 	fmt.Printf("%7s %7s %7s %7s %7s %7s %7s %7s\n", "R", "S", "LL", "LP", "KL", "KP", "TL", "TP")
-
+    
 	for {
-		fmt.Scanf("%f %f", &r, &s)
-
+        fmt.Scanf("%f %f", &r, &s)
 		if r == 0 && s == 0 {
 			break
 		}

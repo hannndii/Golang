@@ -15,10 +15,14 @@ func main() {
 	var count int
 
 	for {
+		fmt.Println("Masukkan judul film: ")
+		fmt.Print("Film: ")
 		fmt.Scan(&input.Judul)
 		if input.Judul == "#" || count == len(listFilm) {
 			break
 		}
+
+		fmt.Println("Masukkan rating film: ")
 		fmt.Scan(&input.Rating)
 		if input.Rating > 4.00 && input.Rating <= 5.00 {
 			listFilm[count] = input

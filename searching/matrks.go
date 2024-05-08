@@ -18,7 +18,7 @@ func main() {
 	cetak(matriks, nRow, nCol)
 	minimum(matriks, nRow, nCol)
 
-	fmt.Printf("%d matriks adalah matriks terkecil berada di baris %d kolom %d", minimum(matriks, nRow, nCol)  )
+	
 
 
 }
@@ -44,17 +44,19 @@ func cetak(T arrMatriks, nR int, nC int) {
 	}
 }
 
-func minimum(T arrMatriks, nR, nC int) int{
-	var min int
+func minimum(T arrMatriks, nR, nC int){
+	var min, baris, kolom int
 	
-	min = T[0][1]
+	min = T[0][0]
 
 	for i := 0; i < nR; i++ {
-		for j := 0; j < nC; j++ {
+		for j := 1; j < nC; j++ {
 			if min > T[i][j] {
 				min = T[i][j]
+				baris = i
+				kolom = j
 			}
 		}
 	}
-	return min
+	fmt.Printf("%d matriks adalah matriks terkecil berada di baris %d kolom %d", min,  baris, kolom )
 }
